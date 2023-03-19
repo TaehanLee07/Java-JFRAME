@@ -1,0 +1,36 @@
+package 화면구현;
+
+import javax.swing.*;
+import java.awt.*;
+
+public class Container_Component extends JFrame {
+
+    JButton btn = new JButton("1번 버튼");
+    JTextField tf = new JTextField(15); // textField 길이
+
+    public Container_Component() {
+        super("Test");
+         setSize(800,680);
+         setLayout(new FlowLayout());
+
+         add(tf);
+         add(btn); // add(component) add 메서드로 컨테이너에 컴포넌트를 추가
+
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+        setVisible(true);
+
+        JButton btn1 =new JButton("2번 버튼");
+        JTextField btn1s = new JTextField(10);
+        add(btn1);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setVisible(true);
+
+
+    }
+
+    public static void main(String[] args) {
+        new Container_Component();
+
+    }
+}
